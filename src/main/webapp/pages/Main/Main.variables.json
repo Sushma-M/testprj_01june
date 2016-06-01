@@ -1,0 +1,39 @@
+{
+  "GoogleapisInvoke" : {
+    "_id" : "wm-GoogleapisInvoke-wm.ServiceVariable-1464764631807",
+    "name" : "GoogleapisInvoke",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "sensor",
+      "value" : "false",
+      "type" : "string"
+    }, {
+      "target" : "origin",
+      "value" : "bind:Widgets.text1.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "destination",
+      "value" : "bind:Widgets.text2.datavalue",
+      "type" : "string"
+    } ],
+    "type" : "googleapis.DirectionsResponse",
+    "service" : "googleapis",
+    "operation" : "invoke",
+    "operationId" : "googleapis_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "RestServiceVirtual"
+  }
+}

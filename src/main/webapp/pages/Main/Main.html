@@ -1,11 +1,36 @@
-<wm-page data-ng-controller="MainPageController" name="mainpage" pagetitle="Main">
-    <wm-header content="header" name="header" height="auto"></wm-header>
+<wm-page name="mainpage" data-ng-controller="MainPageController" pagetitle="Main">
+    <wm-header name="header" height="auto" content="header"></wm-header>
     <wm-top-nav name="topnav" content="topnav"></wm-top-nav>
     <wm-content name="content">
-        <wm-left-panel columnwidth="2" name="leftpanel" content="leftnav"></wm-left-panel>
-        <wm-page-content columnwidth="8" paddingleft="15" paddingright="15" name="mainContent">
+        <wm-left-panel name="leftpanel" content="leftnav" columnwidth="2"></wm-left-panel>
+        <wm-page-content name="mainContent" columnwidth="8" padding="unset 15px">
+            <wm-composite name="composite1">
+                <wm-label class="col-md-3 control-label" name="label1" caption="Source"></wm-label>
+                <wm-container class="col-md-9" name="container1">
+                    <wm-text name="text1"></wm-text>
+                </wm-container>
+            </wm-composite>
+            <wm-composite name="composite2">
+                <wm-label class="col-md-3 control-label" name="label2" caption="Destination"></wm-label>
+                <wm-container class="col-md-9" name="container2">
+                    <wm-text name="text2"></wm-text>
+                </wm-container>
+            </wm-composite>
+            <wm-button class="btn-default" type="button" name="button1" caption="Button" on-Click="GoogleapisInvoke"></wm-button>
+            <wm-grid name="grid1" dataset="bind:Variables.GoogleapisInvoke.dataSet" readonlygrid="true" navigation="Basic">
+                <wm-grid-column readonly="true" caption="Status" mobiledisplay="true" pcdisplay="true" binding="status"></wm-grid-column>
+                <wm-grid-column readonly="true" caption="Route Summary" mobiledisplay="true" pcdisplay="true" binding="route.summary"></wm-grid-column>
+                <wm-grid-column readonly="true" caption="Route.bounds.southwest Lng" mobiledisplay="true" pcdisplay="true" binding="route.bounds.southwest.lng"></wm-grid-column>
+                <wm-grid-column readonly="true" caption="Route.bounds.southwest Lat" mobiledisplay="true" pcdisplay="true" binding="route.bounds.southwest.lat"></wm-grid-column>
+                <wm-grid-column readonly="true" caption="Route.bounds.northeast Lng" mobiledisplay="true" pcdisplay="true" binding="route.bounds.northeast.lng"></wm-grid-column>
+                <wm-grid-column readonly="true" caption="Route.bounds.northeast Lat" mobiledisplay="true" pcdisplay="true" binding="route.bounds.northeast.lat"></wm-grid-column>
+                <wm-grid-column readonly="true" caption="Route.leg.duration Text" mobiledisplay="true" pcdisplay="true" binding="route.leg.duration.text"></wm-grid-column>
+                <wm-grid-column readonly="true" caption="Route.leg.duration Value" mobiledisplay="true" pcdisplay="true" binding="route.leg.duration.value"></wm-grid-column>
+                <wm-grid-column readonly="true" caption="Route.leg.distance Text" mobiledisplay="true" pcdisplay="true" binding="route.leg.distance.text"></wm-grid-column>
+                <wm-grid-column readonly="true" caption="Route.leg.distance Value" mobiledisplay="true" pcdisplay="true" binding="route.leg.distance.value"></wm-grid-column>
+            </wm-grid>
         </wm-page-content>
-        <wm-right-panel columnwidth="2" name="rightpanel" content="rightnav"></wm-right-panel>
+        <wm-right-panel name="rightpanel" content="rightnav" columnwidth="2"></wm-right-panel>
     </wm-content>
     <wm-footer name="footer" content="footer"></wm-footer>
 </wm-page>
