@@ -1,5 +1,5 @@
 var _WM_APP_PROPERTIES = {
-  "activeTheme" : "material",
+  "activeTheme" : "gray-orange",
   "defaultLanguage" : "en",
   "displayName" : "testPrj_01june",
   "homePage" : "Main",
